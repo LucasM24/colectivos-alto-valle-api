@@ -12,4 +12,16 @@ class City extends Model
 
     protected $hidden = ['created_at', 'updated_at'];
     protected $fillable = ['name', 'province'];
+
+    public function cities() {
+        return City::all();
+    }
+
+    public function getName(): String {
+        return $this->name;
+    }
+
+    public function getProvince(): String {
+        return $this->province;
+    }
 }
